@@ -26,7 +26,15 @@ public class Ders20 {
         for (int i = 0; i < rakamlar.length; i++) {
             System.out.println(i+"-"+rakamlar[i]);
         }
+        //---
         
+        String[] names= new String[6];
+      names[0]="Test1";
+      names[2]="Test3";
+      names[5]="Test5";
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(i+"-"+names[i]);
+        }
        
     }
     
