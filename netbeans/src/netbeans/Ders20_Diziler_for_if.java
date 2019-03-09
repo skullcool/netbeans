@@ -18,6 +18,14 @@ public class Ders20 {
             }
  
         }
+        //----
+        int[] rakamlar= new int[6];
+      rakamlar[0]=3;
+      rakamlar[2]=43534543;
+      rakamlar[5]=332432;
+        for (int i = 0; i < rakamlar.length; i++) {
+            System.out.println(i+"-"+rakamlar[i]);
+        }
         
        
     }
