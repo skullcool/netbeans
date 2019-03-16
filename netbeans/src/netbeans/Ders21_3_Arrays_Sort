@@ -1,0 +1,26 @@
+
+package ders21;
+
+import java.util.Arrays;
+
+
+public class Ders21_8 {
+    public static void main(String[] args) {
+        int[] sayilar={4,9,-23,90,-200,76};
+        for (int i = 0; i < sayilar.length; i++) {
+            System.out.println(sayilar[i]);
+        }
+        
+        Arrays.sort(sayilar);
+         for (int i = 0; i < sayilar.length; i++) {
+            System.out.println(sayilar[i]);
+        }
+        
+        
+        System.out.println("Max:"+
+                sayilar[sayilar.length-1]);
+        System.out.println("Min:"+sayilar[0]);
+        
+      
+    }
+}
