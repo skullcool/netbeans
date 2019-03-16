@@ -1,0 +1,15 @@
+
+package ders21;
+
+public class Ders21_7 {
+    public static void main(String[] args) {
+        int[] sayilar={4,9,23,90,0,76};
+        int buyuksayi=0;
+        for (int i = 0; i < sayilar.length; i++) {
+            if (sayilar[i]>buyuksayi) {
+                buyuksayi=sayilar[i];
+            }
+        }
+        System.out.println("Max="+buyuksayi);
+    }
+}
