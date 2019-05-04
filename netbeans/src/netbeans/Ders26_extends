@@ -1,0 +1,74 @@
+
+package Ders2;
+
+public class personel {
+   private int Id;
+   private String AdiSoyadi;
+   private int Maasi;
+
+    public personel() {
+        this.Id = 0;
+        this.AdiSoyadi = "Şafak";
+        this.Maasi = 2000; 
+    }
+
+    public personel(int Id, String AdiSoyadi, int Maasi) {
+        this.Id = Id;
+        this.AdiSoyadi = AdiSoyadi;
+        this.Maasi = Maasi;
+    }
+
+   public void Rapor(){
+       System.out.println("Rapor");
+       System.out.println("Id:"+ this.Id);
+       System.out.println("Adı Soyadı:"+ this.AdiSoyadi);
+       System.out.println("Maaş ($):"+ this.Maasi);
+       System.out.println("---------------");
+   } 
+    
+   
+   
+}
+------------------------------
+
+package Ders2;
+
+
+public class yonetici extends personel {
+   private String Pozisyon;
+   
+    public yonetici(){
+        //super();
+        super(12, "Test Kullanıcısı", 260);
+        super.Rapor();
+    }
+
+    public yonetici(String Pozisyon, int Id, String AdiSoyadi, int Maasi) {
+        super(Id, AdiSoyadi, Maasi);
+        this.Pozisyon = Pozisyon;
+        Rapor();
+    }
+    public void Rapor(){
+       super.Rapor();
+       System.out.println("Pozisyon: " +this.Pozisyon);
+       System.out.println("---------------");
+   } 
+    
+}
+------------------
+
+package Ders2;
+
+
+public class Main {
+    public static void main(String[] args) {
+       /*
+        personel p = new personel();
+        p.Rapor();
+        personel px = new personel(1, "Şafak KUL", 250);
+        px.Rapor();
+*/
+       yonetici y = new yonetici("Müdür", 120, "Hasan", 120);
+       //y.Rapor();
+    }
+}
