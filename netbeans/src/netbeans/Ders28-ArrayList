@@ -1,0 +1,70 @@
+
+package grup2;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+
+public class Main {
+    public static void main(String[] args) {
+        String[] ls1 = {"Elma","Armut","Portakal"};
+        String[] ls2 = new String[3];
+        
+        ArrayList<String> ls3 = new ArrayList<String>();
+        System.out.println("------ADD-------");
+        ls3.add("Lenovo");
+        ls3.add("Asus");
+        ls3.add("Casper");
+        ls3.add("Dell");
+        System.out.println("------GET-------");
+        System.out.println(ls3.get(0));
+        System.out.println("------SİZE & FOR-----");
+        for (int i = 0; i < ls3.size(); i++) {
+            System.out.println(ls3.get(i));
+        }
+         System.out.println("-----FOREACH-----");
+         for(String x : ls3){
+             System.out.println(x);
+         }
+        System.out.println("-----.FOREACH-----");
+        ls3.forEach((x) ->{
+          System.out.println(x);
+          }
+        );
+       System.out.println("---ADD Index---");
+       ls3.add(2, "MSI");
+       ls3.forEach((x) ->{
+       System.out.println(x);
+       });
+       
+       System.out.println("---SORT---");
+        Collections.sort(ls3);
+        ls3.forEach((x)->{System.out.println(x);});
+       
+        System.out.println("---SET Index---");
+       ls3.set(0, "HP");
+       ls3.forEach((x)-> {System.out.println(x);});
+       System.out.println("---REMOVE---");
+       ls3.remove("MSI");
+       ls3.forEach((x)->{System.out.println(x);});
+       System.out.println("---REMOVE-Index--");
+       ls3.remove(0);
+       for(String x : ls3){
+             System.out.println(x);
+       }
+       System.out.println("---contains---");
+       boolean a= ls3.contains("Casper");
+        System.out.println("İçeri mi:"+a);
+        
+        System.out.println("---indexOf---");
+        int d= ls3.indexOf("Casper");
+        System.out.println("Casper->"+d);
+        
+       System.out.println("---isEmpty---");
+        System.out.println("Boş mu:"+ ls3.isEmpty());
+       System.out.println("---CLEAR---");
+       ls3.clear();
+       System.out.println("Boş mu:"+ ls3.isEmpty());
+    }
+}
